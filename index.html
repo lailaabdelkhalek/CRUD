@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="m-auto w-75 py-4">
+
+            <h3 class="py-3 fw-bold">Product Management System</h3>
+        <label for="productnameinput">product name:</label>
+        <input onkeyup="validateProductName()" type="text" name="" id="productnameinput" class="form-control mb-2">
+        <label for="productpriceinput">product price:</label>
+        <input type="number" onkeyup="validateProductPrice()" name="" id="productpriceinput" class="form-control mb-2">
+        <label for="productcategoryinput">product category:</label>
+        <input type="text" onkeyup="validateProductCategory()" name="" id="productcategoryinput" class="form-control mb-2">
+        <label for="productdescinput">product description:</label>
+        <textarea type="text" onkeyup="validateProductDesc()" name="" id="productdescinput" class="form-control mb-2"></textarea>
+
+        <button id="addbtn" onclick="addProduct()" class="btn btn-outline-info">Add product</button>
+        <button id="updatebtn" onclick="updateProduct()" class="btn d-none btn-outline-primary">update</button>
+      
+        </div>
+       <div class="w-75 mx-auto">
+           <label for="search">search :</label>
+        <input oninput="searchProduct(this.value)" type="text" placeholder="search by name" class="form-control py-2 my-3" id="search">
+       </div>
+
+        <table class="table table-striped w-75 m-auto">
+            <thead>
+                <th>index</th>
+                <th>product name</th>
+                <th>product price</th>
+                <th>product category</th>
+                <th>product desc</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tablebody">
+                
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
